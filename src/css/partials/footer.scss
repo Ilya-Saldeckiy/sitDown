@@ -1,0 +1,129 @@
+
+.footer{
+
+  margin-top: 70px;
+
+  &__up{
+
+    background-color: $md_grey;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &-position{
+      display: flex;
+      align-items: center;
+
+      &__links{
+        display: flex;
+        align-items: flex-start;
+        max-width: 843px;
+        width: 100%;
+      }
+    }
+
+    &-logo {
+
+      margin-bottom: 31px;
+      display: block;
+      height: 27px;
+
+      &__block {
+        margin-right: auto;
+
+        @media (max-width: 1309px) {
+          margin-right: 32px;
+        }
+      }
+    }
+
+    &-social{
+
+      &__list{
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        column-gap: 14px;
+        margin-bottom: 0;
+      }
+
+      &__item{
+        & a{
+          padding: 3px;
+          display: block;
+          height: 36px;
+
+          & svg{
+            fill: $grey;
+            transition: fill .3s ease;
+          }
+
+          &:hover{
+            & svg{
+              fill: $primary;
+            }
+          }
+
+          &:focus{
+            background-color: $primary_light;
+            & svg{
+              fill: $White;
+            }
+          }
+
+          &:active{
+            background-color: unset;
+            & svg{
+              fill: $primary_shade;
+            }
+          }
+        }
+      }
+    }
+
+    &-link__block{
+
+      &:not(:last-child){
+        margin-right: auto;
+      }
+
+      & h3{
+        @include f_16;
+        line-height: 16px;
+        color: $Black;
+        margin-bottom: 10px;
+      }
+
+      & ul{
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        & li{
+          line-height: 14px;
+
+          & a{
+            @include f_14;
+            line-height: 14px;
+            color: $grey;
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+  &__down{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &-text{
+      @include f_14;
+      color: $grey;
+      text-align: center;
+    }
+  }
+
+}

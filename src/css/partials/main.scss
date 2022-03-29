@@ -1,0 +1,251 @@
+
+.main{
+  &__description{
+    &-position{
+      display: flex;
+      align-items: center;
+      padding-top: 38px;
+      padding-bottom: 40px;
+    }
+
+    &-caption{
+      @include f_60_b;
+      color: $Black;
+      margin-bottom: 14px;
+
+      & span{
+        font-weight: 400;
+      }
+    }
+
+    &-text{
+      @include f_16;
+      color: $Black;
+      margin-bottom: 45px;
+
+      & a{
+        color: $primary;
+      }
+
+      &__block{
+        width: 635px;
+        margin-right: auto;
+      }
+    }
+
+    &-btn{
+      width: 245px;
+      height: 70px;
+      border-radius: 40px;
+      @include f_20;
+      font-weight: 500;
+    }
+  }
+
+  &__podcast{
+    padding-top: 93px;
+    padding-bottom: 93px;
+
+    & .main__caption{
+      margin-bottom: 30px;
+    }
+
+    &-list{
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    &-item{
+
+      width: 540px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background-color: $White;
+
+      &__image{
+        position: relative;
+        width: 112px;
+        height: 140px;
+
+        &-date{
+          padding-left: 6px;
+          padding-right: 6px;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          background-color: #E6E8EC;
+          position: absolute;
+          bottom: 0;
+          @include f_10;
+          color: $Black;
+          line-height: 9px;
+        }
+      }
+
+      &__player{
+        width: 100%;
+
+        &-block{
+          display: flex;
+          align-items: center;
+          padding-left: 30px;
+          padding-right: 33px;
+          padding-top: 20px;
+
+          &-actions{
+            display: flex;
+            padding-left: 30px;
+            padding-right: 33px;
+            padding-top: 4px;
+            margin-top: 20px;
+            border-top: 1px solid #E6E8EC;
+
+            & .actions__item{
+              padding: 2px;
+              background-color: unset;
+              display: block;
+              border-radius: 0;
+              padding-bottom: 0;
+              padding-top: 0;
+
+              & svg{
+                margin-right: 6px;
+                fill: #A1A6B4;
+                transition: fill .3s;
+              }
+
+              & span{
+                @include f_16;
+                line-height: 16px;
+                transition: color .3s;
+              }
+
+              &:not(:last-child){
+                margin-right: 30px;
+              }
+
+              &:hover{
+                & svg {
+                  fill: $primary;
+                }
+
+                & span{
+                  color: $primary;
+                }
+              }
+
+              &:focus{
+                background-color: $primary_light;
+
+                & svg {
+                  fill: $White
+                }
+
+                & span{
+                  color: $White;
+                }
+              }
+
+              &:active{
+
+                background-color: unset;
+
+                & svg {
+                  & path{
+                    fill: $primary_shade;
+                  }
+                  fill: $primary_shade;
+                }
+
+                & span{
+                  color: $primary_shade;
+                }
+              }
+
+
+            }
+          }
+        }
+
+        &-text{
+          margin-right: auto;
+
+          & p{
+            @include f_12;
+            line-height: 12px;
+            margin-bottom: 8px;
+          }
+
+          & h3{
+            @include f_20;
+            color: $Black;
+            line-height: 20px;
+            margin-bottom: 4px;
+          }
+
+          & h4{
+            @include f_14;
+            margin-bottom: 0;
+          }
+        }
+
+        &-btn{
+          width: 42px;
+          height: 42px;
+          margin-bottom: 0;
+          margin-left: auto;
+          border: 2px solid #A1A6B4;
+          border-radius: 100%;
+          background-color: unset;
+
+          & svg{
+            position: relative;
+            left: 2px;
+            fill: #A1A6B4;
+            transition: fill 0.5s;
+          }
+
+          &:hover{
+            border-color: $primary;
+
+            & svg{
+              fill: $primary;
+            }
+          }
+
+          &:focus{
+            border-color: $primary_light;
+
+            & svg{
+              fill: $primary_light;
+            }
+          }
+
+          &:active{
+            border-color: $primary_shade;
+            background-color: $primary_shade;
+
+            & svg{
+              fill: $White;
+            }
+          }
+        }
+
+      }
+
+    }
+
+    &-btn{
+      display: block;
+      width: 246px;
+      height: 70px;
+      border: 2px solid #6D31EE;
+      border-radius: 40px;
+      margin: 0 auto;
+    }
+
+  }
+}
